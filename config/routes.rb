@@ -8,6 +8,12 @@ Rails.application.routes.draw do
 
   get 'articles/new' do 
  
+    # article GET    /articles/:id(.:format)      articles#show
+ 
   end
+  resources :articles do
+    resources :comments
+  end
+  
 
 end
